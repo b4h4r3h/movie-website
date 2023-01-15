@@ -1,95 +1,114 @@
 *, *:after, *:before{
     box-sizing: border-box;
 }
-.img{
-    width: 440px;
-    height: auto;
-    border-radius: 16px;
-}
-body{
-    direction: rtl;
-    background: #111;
-    font-family: Vazirmatn;
-}
-.movie-box{
-    display: flex;
-    gap: 16px;
-}
-.ov{
-    overflow: hidden;
-}
 .wrapper{
-    padding: 0 64px;
+    max-width: 1320px;
+    margin: 0 auto;
 }
-.bg{
-    background-image: url(https://static.namava.ir/Content/Upload/Images/420744a4-432b-47ec-ac87-742020710e2a.jpg?anchor=middlecenter&crop=auto&scale=both&w=1920&h=900);
-    height: 600px;
+.title{
+    text-align: center;
+}
+.product-list{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.product-image{
     position: relative;
 }
-.p-white{
-    color: #fff;
+.product-card .product-image img{
+    width: 290px;
+    height: 340px;
+    border-radius: 8px;
 }
-.description-size{
-    font-size: 14px;
+.product-card .hover-gallery img{
+    width: 38px;
+    height: 48px;
 }
-.title-font-size{
-    font-size: 18px;
-    font-weight: 600;
-}
-.section-margin-top{
-    margin-top: 40px;
-}
-.hover-box-parent{
-    position: relative;
-}
-.hover-box{
-    opacity: 0;
-    border-radius: 16px;
-    content: "";
-    display: block;
+.product-card .off-percent{
     position: absolute;
-    top: 0;
+    top: 24px;
     left: 0;
-    width: 100%;
-    height: 97%;
-    background-color: rgba(0, 0, 0, 0.77);
-}
-.hover-box:hover{
-    opacity: 1;
-    cursor: pointer;
-}
-.hover-item{
-    position: absolute;
-    bottom: 12px;
-    right: 8px;
-
-}
-.font-bold{
+    padding: 4px 20px;
+    background-color: #f16422;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    font-size: 20px;
     font-weight: 600;
 }
-.flex-8gap-row{
-    display: flex;
-    gap: 8px;
-    align-items: center;
+.extra-off{
+    padding: 6px 16px;
+    background-color: #00BF6F;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 2;
 }
-.flex-40gap-row{
-    display: flex;
-    gap: 24px;
-    align-items: center;
+.extra-off-parent{
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    text-align: center;
+    width: 100%;
 }
-.vazirfa{
+.vazir-fa{
     font-family: VazirmatnFa;
 }
-.big-title{
-    font-size: 56px;
+.product-card .brand-price .brand{
     font-weight: 600;
-    margin: 0;
+    font-size: 18px;
 }
-.movie-poster{
+.product-card .brand-price{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
-.icon-24{
-    width: 24px;
-    height: 24px;
+.product-card .brand-price .off-price{
+    text-decoration: line-through;
+    color: #8e8e8e;
+}
+.product-card .product-name-price{
+    display: flex;
+    justify-content: space-between;
+}
+.product-card .product-name-price .main-price{
+    color: #00BF6F;
+}
+.product-card .size-parent{
+    display: flex;
+    gap: 8px;
+}
+.product-card .size-parent span{
+    padding: 4px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+}
+.product-card .hover-gallery{
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.product-card .hover-gallery img{
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+}
+.product-card .hover-box{
+    position: absolute;
+    display: block;
+    z-index: 2;
+    opacity: 0 ;
+    cursor: pointer;
+}
+.product-card .hover-box .img{
+    width: 290px;
+    height: 340px;
+    border-radius: 8px;
+}
+.product-card .hover-box:hover{
+    display: block;
+    z-index: 4;
+    opacity: 1;
+    transition: all 0.5s;
 }
